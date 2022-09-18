@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      style="transform: translate(-50%, -50%)"
+      class="p-10 pt-20 absolute top-1/2 left-1/2 w-[500px] h-[300px] rounded-md bg-[#e0e0e0] shadow-3xl"
+    >
+      <form class="modme-form flex flex-col">
+        <label class="text-3xl pb-4" for="check-id">Введите Modme ID</label>
+        <input
+          class="rounded p-3 text-lg outline-0 h-[50px]"
+          type="text"
+          id="modme-id"
+          placeholder="198292"
+          required
+          maxlength="6"
+          onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+        />
+        <button
+        type="button"
+          onclick="if(document.querySelector('#modme-id').value.length === 6) {document.querySelector('.modme-form').classList.add('hidden')
+        document.querySelector('.check-form').classList.remove('hidden')
+        }"
+          class="mt-6 bg-[blue] rounded w-[200px] h-[50px] text-white text-xl"
+        >
+          Отправить
+        </button>
+      </form>
+
+      <!-- Hide modme id and show code checker -->
+
+      <form class="check-form flex flex-col hidden">
+        <label class="text-3xl pb-4" for="check-id"
+          >Введите проверочный код</label
+        >
+        <input
+          class="rounded p-3 text-lg outline-0 h-[50px]"
+          type="text"
+          id="check-id"
+          placeholder="198292"
+          required
+          maxlength="6"
+          onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+        />
+        <button
+          class="mt-6 bg-[blue] rounded w-[200px] h-[50px] text-white text-xl"
+        >
+          Отправить
+        </button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
