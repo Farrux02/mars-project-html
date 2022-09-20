@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>projects</h1>
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tab flex justify-center">
+      <button class="tablinks" onclick="course(event, 'Fd')">Foundation</button>
+      <button class="tablinks" onclick="course(event, 'Pg')">
+        Programming
+      </button>
+      <button class="tablinks" onclick="course(event, 'Ds')">Design</button>
+    </nav>
+    <main class="container px-20 mt-5">
+      <div id="Fd" class="tabcontent">
+        <div class="flex flex-col w-80 border-4 rounded-md">
+          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+          <div class="flex flex-col items-center gap-y-6 m-4">
+            <h5 class="text-xl font-bold">Foundation project</h5>
+            <p class="text-lg">Project I've done, foundation</p>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Pg" class="tabcontent">
+        <div class="flex flex-col w-80 border-4 rounded-md">
+          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+          <div class="flex flex-col items-center gap-y-6 m-4">
+            <h5 class="text-xl font-bold">Programming project</h5>
+            <p class="text-lg">Project I've done, Programming</p>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Ds" class="tabcontent">
+        <div class=" flex flex-col w-80 border-4 rounded-md">
+          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+          <div class="flex flex-col items-center gap-y-6 m-4">
+            <h5 class="text-xl font-bold">Design project</h5>
+            <p class="text-lg">Project I've done, design</p>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function course(evt, cityName) {
+        // Declare all variables
+        let i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
 </html>
