@@ -41,43 +41,68 @@
     </style>
   </head>
   <body>
-    <nav class="tab flex justify-center">
-      <button class="tablinks" onclick="course(event, 'Fd')">Foundation</button>
-      <button class="tablinks" onclick="course(event, 'Pg')">
-        Programming
-      </button>
-      <button class="tablinks" onclick="course(event, 'Ds')">Design</button>
+    <nav class="tab flex justify-between pr-4">
+      <div class="">
+        <button class="tablinks" onclick="course(event, 'Fd')">
+          Foundation
+        </button>
+        <button class="tablinks" onclick="course(event, 'Pg')">
+          Programming
+        </button>
+        <button class="tablinks" onclick="course(event, 'Ds')">Design</button>
+      </div>
+      <div class="self-center">
+        <h3>Привет, Name Surname</h3>
+      </div>
     </nav>
     <main class="container px-20 mt-5">
-      <div id="Fd" class="tabcontent">
+      <div id="Fd" class="tabcontent flex gap-6 flex-wrap">
         <div class="flex flex-col w-80 border-4 rounded-md">
-          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+          <img
+            class="rounded-t"
+            src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg"
+            alt="project-photo"
+          />
           <div class="flex flex-col items-center gap-y-6 m-4">
             <h5 class="text-xl font-bold">Foundation project</h5>
             <p class="text-lg">Project I've done, foundation</p>
-            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">
+              Перейти
+            </button>
           </div>
         </div>
-      </div>
+      л</div>
 
       <div id="Pg" class="tabcontent">
         <div class="flex flex-col w-80 border-4 rounded-md">
-          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+          <img
+            class="rounded-t"
+            src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg"
+            alt="project-photo"
+          />
           <div class="flex flex-col items-center gap-y-6 m-4">
             <h5 class="text-xl font-bold">Programming project</h5>
             <p class="text-lg">Project I've done, Programming</p>
-            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">
+              Перейти
+            </button>
           </div>
         </div>
       </div>
 
       <div id="Ds" class="tabcontent">
-        <div class=" flex flex-col w-80 border-4 rounded-md">
-          <img class="rounded-t" src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg" alt="project-photo">
+        <div class="flex flex-col w-80 border-4 rounded-md">
+          <img
+            class="rounded-t"
+            src="https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg"
+            alt="project-photo"
+          />
           <div class="flex flex-col items-center gap-y-6 m-4">
             <h5 class="text-xl font-bold">Design project</h5>
             <p class="text-lg">Project I've done, design</p>
-            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">Перейти</button>
+            <button class="bg-zinc-400 h-12 w-32 rounded text-lg text-white">
+              Перейти
+            </button>
           </div>
         </div>
       </div>
@@ -101,7 +126,7 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(cityName).style.display = "flex";
         evt.currentTarget.className += " active";
       }
     </script>
