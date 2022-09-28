@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: rgb(121, 9, 28);
+        background: linear-gradient(
+          90deg,
+          rgba(121, 9, 28, 1) 13%,
+          rgba(2, 0, 36, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container px-20 pt-4 flex flex-col gap-y-4">
+      <div
+        style="transform: translate(-50%, -50%)"
+        class="border-4 flex rounded-lg absolute top-1/2 left-1/2 h-[200px] bg-white"
+      >
+        <div class="col-md-4 w-[400px]">
+          <img
+            src="https://www.mercy.edu/sites/default/files/2020-07/iStock-1182604339.jpg"
+            class="rounded-l h-[100%]"
+            alt="..."
+          />
+        </div>
+        <div class="p-4">
+          <div class="card-body flex flex-col gap-y-4">
+            <h5 class="text-3xl">Project name</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <form action="#">
+              <input
+                type="file"
+                name="project-file"
+                id="upload"
+                accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.html,.css"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let uploadInput = document.getElementById("upload");
+      let num = 0;
+      let fileType = "";
+
+      uploadInput.addEventListener("change", function () {
+        for (let i = 0; i < uploadInput.value.length; i++) {
+          if (uploadInput.value[i] === ".") {
+            num = ++i;
+          }
+        }
+        fileType = uploadInput.value.substring(num);
+        if (fileType === 'xlsx' || fileType === 'xls') {
+          document.querySelector('img').src = 'https://findicons.com/files/icons/2795/office_2013_hd/2000/excel.png'
+        }
+        if (fileType === 'docx' || fileType === 'doc') {
+          document.querySelector('img').src = 'https://play-lh.googleusercontent.com/9kABykeGovHPy-dN19lRxxnCp8IZK3Pkl8qLFNxrEe-hhKVZeiyhTBEIRUt6t-vhxQ'
+        }
+        if (fileType === 'pptx' || fileType === 'ppt') {
+          document.querySelector('img').src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png'
+        }
+      });
+    </script>
+  </body>
+</html>

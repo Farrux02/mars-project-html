@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="container px-20 pt-4 flex flex-col gap-y-4">
-      <div class="border-4 flex rounded-lg">
+    <input type="hidden" name="course_project_id" value="{{ object.id }}">
+      <input type="hidden" name="student_id" value="{{ student.id }}">
+      <div class="border-4 flex rounded-lg bg-white">
         <div class="col-md-4 w-[400px]">
           <img
             src="https://www.mercy.edu/sites/default/files/2020-07/iStock-1182604339.jpg"
@@ -25,12 +26,12 @@
               lead-in to additional content. This content is a little bit
               longer.
             </p>
-            <a
+            <button 
               class="bg-sky-400 w-[200px] h-[50px] flex justify-center items-center text-white text-2xl rounded-md"
-              href="https://farrux-umarket.netlify.app/"
+              type="submit"
             >
               Show
-            </a>
+            </button>
           </div>
         </div>
       </div>
