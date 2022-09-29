@@ -89,19 +89,19 @@
           />
         </form>
       </div>
-      <div class="w-[60%] bg-white rounded-lg" id="upload-files-wrapper"></div>
+      <form class="w-[60%] bg-white rounded-lg" id="upload-files-wrapper"></а>
     </div>
 
     <script>
       let formWrapper = document.getElementById("form-wrapper");
       let uploadInput = document.getElementById("file-input");
-      let uploadFilesWrapper = document.querySelector("#upload-files-wrapper");
+      let uploadFilesWrapper = document.querySelector(".upload-wrapper");
       let num = 0;
       let i = 0;
       let fileType = "";
 
       uploadInput.addEventListener("change", function () {
-        formWrapper.classList.add("hide-input");
+        uploadInput.classList.add("hide-input");
 
         for (let file of uploadInput.files) {
           let fileWrapper = document.createElement("div");
@@ -135,6 +135,12 @@
               "https://play-lh.googleusercontent.com/kIwlXqs28otssKK_9AKwdkB6gouex_U2WmtLshTACnwIJuvOqVvJEzewpzuYBXwXQQ";
           }
         }
+
+        let uploadBtn = document.createElement('input');
+        uploadBtn.type = 'submit';
+        uploadBtn.value = 'Upload';
+        uploadBtn.classList.add("text-white", "bg-blue-700", "hover:bg-blue-800", "focus:ring-4" ,"focus:outline-none", "focus:ring-blue-300", "dark:hover:bg-blue-700" ,"dark:focus:ring-blue-800", "font-medium", "rounded-lg" ,"text-sm", "px-5", "py-2.5" ,"text-center", "dark:bg-blue-600");
+        uploadFilesWrapper.append(uploadBtn)
       });
     </script>
   </body>
