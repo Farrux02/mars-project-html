@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: rgb(121, 9, 28);
+        background: linear-gradient(
+          90deg,
+          rgba(121, 9, 28, 1) 13%,
+          rgba(2, 0, 36, 1) 100%
+        );
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pt-20 flex flex-col gap-y-4 items-center">
+      <table class="table-fixed border-2 w-[50%]">
+        <thead class="h-[60px] bg-slate-400">
+            <tr>
+                <th></th>
+                <th>File name</е>
+                <th>File description</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr
+          class="border-b bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-100"
+        >
+          <td
+            scope="col"
+            class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
+          ></td>
+          <td
+            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
+          >
+            <a href="{{obj.file.url}}" class="file-name text-black">asdad.doc</a>
+          </td>
+          <td class="text-xl font-normal text-slate-600">
+            asdasd
+          </td>
+        </tr>
+        <tr
+          class="border-b bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-100"
+        >
+          <td
+            scope="col"
+            class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
+          ></td>
+          <td
+            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
+          >
+            <a href="{{obj.file.url}}" class="file-name text-black">asdad.js</a>
+          </td>
+          <td class="text-xl font-normal text-slate-600">
+            asdasd
+          </td>
+        </tr>
+        <tr
+          class="border-b bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-100"
+        >
+          <td
+            scope="col"
+            class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
+          ></td>
+          <td
+            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
+          >
+            <a href="{{obj.file.url}}" class="file-name text-black">asdad.xlsx</a>
+          </td>
+          <td class="text-xl font-normal text-slate-600">
+            asdasd
+          </td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      let fileNames = document.querySelectorAll(".file-name");
+
+      for (let fileName of fileNames) {
+        let parent = fileName.parentElement;
+        let parentSibling = parent.previousElementSibling;
+        let dot = fileName.innerHTML.indexOf(".") + 1;
+
+        let fileType = fileName.innerHTML.substring(dot);
+
+        if (fileType === "docx" || fileType === "doc") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.max-1100x1100.png' />";
+        } else if (fileType === "jpg" || fileType === "jpeg" || fileType === "JPEG" || fileType === "png") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://fileviewerplus.com/img/icon/256/jpg-63.png' />";
+        } else if (fileType === "pdf") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://play-lh.googleusercontent.com/kIwlXqs28otssKK_9AKwdkB6gouex_U2WmtLshTACnwIJuvOqVvJEzewpzuYBXwXQQ' />";
+        } else if (fileType === "xls" || fileType === "xlsx") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://lh3.ggpht.com/e3oZddUHSC6EcnxC80rl_6HbY94sM63dn6KrEXJ-C4GIUN-t1XM0uYA_WUwyhbIHmVMH=w300' />";
+        } else if (fileType === "ppt" || fileType === "pptx") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://blogs.shu.ac.uk/shutel/files/2014/08/GSlides.png' />";
+        } else if (fileType === "py") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png' />";
+        } else if (fileType === "js") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png' />";
+        }else if (fileType === "html") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png' />";
+        } else if (fileType === "css") {
+            parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png' />";
+        }
+      }
+    </script>
+  </body>
+</html>

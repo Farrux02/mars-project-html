@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <table>
+      <tr
+        class="border-b transition duration-300 ease-in-out hover:bg-gray-100"
+      >
+        <th
+          scope="col"
+          class="text-sm font-medium text-gray-900 px-6 py-4 text-left file-logos"
+        ></th>
+        <td
+          class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap td"
+        >
+          <a href="{{obj.file.url}}" class="file-name">asdad.docx</a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition duration-300 ease-in-out hover:bg-gray-100"
+      >
+        <th
+          scope="col"
+          class="text-sm font-medium text-gray-900 px-6 py-4 text-left file-logos"
+        ></th>
+        <td
+          class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap td"
+        >
+          <a href="{{obj.file.url}}" class="file-name">asdad.jpg</a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition duration-300 ease-in-out hover:bg-gray-100"
+      >
+        <th
+          scope="col"
+          class="text-sm font-medium text-gray-900 px-6 py-4 text-left file-logos"
+        ></th>
+        <td
+          class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap td"
+        >
+          <a href="{{obj.file.url}}" class="file-name">asdad.pdf</a>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      let fileNames = document.querySelectorAll(".file-name");
+      let td = document.querySelectorAll(".td");
+      let fileIcon = document.createElement("img");
+      fileIcon.classList.add("w-[50px]");
+
+      for (let fileName of fileNames ) {
+        let parent = fileName.parentElement;
+        let parentSibling = parent.previousElementSibling;
+        let dot = fileName.innerHTML.indexOf(".") + 1;
+        parentSibling.append(fileIcon);
+
+        console.log(parentSibling);
+
+        let fileType = fileName.innerHTML.substring(dot);
+
+      if (fileType === "docx") {
+        parentSibling.innerHTML = '<img src="sas">1</img>'
+      } else if (fileType === "jpg") {
+        parentSibling.innerHTML = 2
+      } else if (fileType === "pdf") {
+        parentSibling.innerHTML = 3
+      }
+      }
+    </script>
+  </body>
+</html>
