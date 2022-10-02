@@ -92,25 +92,25 @@
         let parentSibling = parent.previousElementSibling;
         let dot = fileName.innerHTML.indexOf(".") + 1;
 
-        let fileType = fileName.innerHTML.substring(dot);
+        let uploadedFileType = fileName.innerHTML.substring(dot);
 
-        if (fileType === "docx" || fileType === "doc") {
+        if (uploadedFileType === "docx" || uploadedFileType === "doc") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.max-1100x1100.png' />";
-        } else if (fileType === "jpg" || fileType === "jpeg" || fileType === "JPEG" || fileType === "png") {
+        } else if (uploadedFileType === "jpg" || uploadedFileType === "jpeg" || uploadedFileType === "JPEG" || uploadedFileType === "png") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://fileviewerplus.com/img/icon/256/jpg-63.png' />";
-        } else if (fileType === "pdf") {
+        } else if (uploadedFileType === "pdf") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://play-lh.googleusercontent.com/kIwlXqs28otssKK_9AKwdkB6gouex_U2WmtLshTACnwIJuvOqVvJEzewpzuYBXwXQQ' />";
-        } else if (fileType === "xls" || fileType === "xlsx") {
+        } else if (uploadedFileType === "xls" || uploadedFileType === "xlsx") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://lh3.ggpht.com/e3oZddUHSC6EcnxC80rl_6HbY94sM63dn6KrEXJ-C4GIUN-t1XM0uYA_WUwyhbIHmVMH=w300' />";
-        } else if (fileType === "ppt" || fileType === "pptx") {
+        } else if (uploadedFileType === "ppt" || uploadedFileType === "pptx") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://blogs.shu.ac.uk/shutel/files/2014/08/GSlides.png' />";
-        } else if (fileType === "py") {
+        } else if (uploadedFileType === "py") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png' />";
-        } else if (fileType === "js") {
+        } else if (uploadedFileType === "js") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png' />";
-        }else if (fileType === "html") {
+        }else if (uploadedFileType === "html") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png' />";
-        } else if (fileType === "css") {
+        } else if (uploadedFileType === "css") {
             parentSibling.innerHTML = "<img class='w-[50px]' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png' />";
         }
       }
