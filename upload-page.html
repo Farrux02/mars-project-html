@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
       body {
         background: rgb(121, 9, 28);
@@ -60,44 +61,23 @@
     </style>
   </head>
   <body>
+    <header>
+      <ul class="flex gap-x-8 p-6 pl-12 bg-slate-400"> 
+        <li>Username</li>
+        <li>User course</li>
+        <li>Project name</li>
+      </ul>
+    </header>
     <div class="pt-20 flex flex-col gap-y-4 items-center">
-      <div
-        style="transform: translate(-50%, -50%)"
-        id="form-wrapper"
-        class="border-4 flex rounded-lg absolute top-1/2 left-1/2 bg-white"
-      >
-        <form class="upload-wrapper" action="#">
-          <!-- <div>
-            <img
-              class="upload-img"
-              src="https://cdn2.iconfinder.com/data/icons/gemsicon-set-1/125/45-512.png"
-              alt="upload-logo"
-            />
-            <input
-              type="file"
-              name="project-file"
-              id="file-input"
-              accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.html,.css,.pdf"
-              multiple
-            />
-            <label for="file-input">Выберите файл</label>
-            <span>или перетащите его сюда</span>
-          </div> -->
-          <input
-            type="file"
-            name="project-file"
-            id="file-input"
-            accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.html,.css,.pdf"
-            multiple
-          />
-        </form>
-      </div>
-      <table class="table-fixed border-2 w-[50%]">
+
+      <table class="table-fixed border-2 w-[80%] mb-2">
         <thead class="h-[60px] bg-slate-400">
             <tr>
-                <th></th>
-                <th>File name</е>
-                <th>File description</th>
+                <th class="w-[100px]"></th>
+                <th class="w-[500px] text-xl">Название файла</е>
+                <th class="w-[500px] text-xl">Отзыв учителя</th>
+                <th class="w-[50px]"></th>
+                <th class="w-[50px]"></th>
             </tr>
         </thead>
         <tbody>
@@ -109,50 +89,46 @@
             class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
           ></td>
           <td
-            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
+            class="text-lg text-gray-900 font-medium py-4 td break-words whitespace-normal "
           >
-            <a href="{{obj.file.url}}" class="file-name text-black">asdad.doc</a>
+            <a href="{{obj.file.url}}" class="file-name text-black">asdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdadasdad.doc</a>
           </td>
           <td class="text-xl font-normal text-slate-600">
             asdasd
           </td>
-        </tr>
-        <tr
-          class="border-b bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-100"
-        >
-          <td
-            scope="col"
-            class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
-          ></td>
-          <td
-            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
-          >
-            <a href="{{obj.file.url}}" class="file-name text-black">asdad.js</a>
-          </td>
-          <td class="text-xl font-normal text-slate-600">
-            asdasd
-          </td>
-        </tr>
-        <tr
-          class="border-b bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-100"
-        >
-          <td
-            scope="col"
-            class="text-sm pl-4 text-gray-900 py-4 text-left file-logos"
-          ></td>
-          <td
-            class="text-lg text-gray-900 font-medium py-4 whitespace-nowrap td"
-          >
-            <a href="{{obj.file.url}}" class="file-name text-black">asdad.xlsx</a>
-          </td>
-          <td class="text-xl font-normal text-slate-600">
-            asdasd
+          <td class="w-[20px]">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash  hover:fill-red-800" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>
+            </button>
+        </td>
+          <td class="w-[20px]">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-download hover:fill-blue-500" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+              </svg>
+            </button>
           </td>
         </tr>
-        
         </tbody>
       </table>
-      
+      <div
+      id="form-wrapper"
+      class="border-4 flex rounded-lg bg-white mb-6 "
+    >
+      <form class="upload-wrapper" action="#">
+        <input
+          type="file"
+          name="project-file"
+          id="file-input"
+          accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.html,.css,.pdf"
+          multiple
+        />
+      </form>
+    </div>
     </div>
 
     <script>
@@ -200,12 +176,12 @@
         }
 
         
+        let uploadBtn = document.createElement('input');
+          uploadBtn.type = 'submit';
+          uploadBtn.value = 'Upload';
+          uploadBtn.classList.add("text-white", "bg-blue-700", "hover:bg-blue-800", "focus:ring-4" ,"focus:outline-none", "focus:ring-blue-300", "dark:hover:bg-blue-700" ,"dark:focus:ring-blue-800", "font-medium", "rounded-lg" ,"text-sm", "px-5", "py-2.5" ,"text-center", "dark:bg-blue-600");
+          uploadFilesWrapper.append(uploadBtn)
       });
-      let uploadBtn = document.createElement('input');
-        uploadBtn.type = 'submit';
-        uploadBtn.value = 'Upload';
-        uploadBtn.classList.add("text-white", "bg-blue-700", "hover:bg-blue-800", "focus:ring-4" ,"focus:outline-none", "focus:ring-blue-300", "dark:hover:bg-blue-700" ,"dark:focus:ring-blue-800", "font-medium", "rounded-lg" ,"text-sm", "px-5", "py-2.5" ,"text-center", "dark:bg-blue-600");
-        uploadFilesWrapper.append(uploadBtn)
 
         let fileNames = document.querySelectorAll(".file-name");
 
