@@ -62,15 +62,40 @@
   </head>
   <body>
     <header>
-      <ul class="flex gap-x-8 p-6 pl-12 bg-slate-400"> 
-        <li>Username</li>
-        <li>User course</li>
-        <li>Project name</li>
-      </ul>
-    </header>
+      <nav class="bg-white border-gray-200 px-20 lg:px-6 py-2.5 dark:bg-gray-800">
+          <div class="flex flex-wrap justify-between items-center px-20">
+              <a href="#" class="flex items-center w-[150px]">
+                  <img src="./PNGMARS.png" class="mr-3 w-full" alt="Flowbite Logo" />
+              </a>
+              <div class="hidden justify-between items-center w-full lg:flex lg:w-auto" id="mobile-menu-2">
+                  <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                      <li>
+                          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
+                      </li>
+                      <li>
+                          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+                      </li>
+                      <li>
+                          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Uploads</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                  <li>
+                    <p class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Username</p>
+                </li>
+                  <li>
+                    <p class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">User course</p>
+                </li>
+                </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
     <div class="pt-20 flex flex-col gap-y-4 items-center">
 
-      <table class="table-fixed border-2 w-[80%] mb-2">
+      <table class="table-fixed rounded-lg overflow-hidden border-2 w-[80%] mb-2">
         <thead class="h-[60px] bg-slate-400">
             <tr>
                 <th class="w-[100px]"></th>
